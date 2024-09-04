@@ -5,6 +5,11 @@ import { AppServiceImpl } from './app.service-impl';
 @Module({
   imports: [],
   controllers: [AppController],
-  providers: [AppServiceImpl],
+  providers: [
+    {
+      provide: 'APP_SERVICE',
+      useClass: AppServiceImpl,
+    },
+  ],
 })
 export class AppModule {}
