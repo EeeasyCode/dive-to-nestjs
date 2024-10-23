@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppServiceImpl } from './app.service-impl';
-import { MailModule } from './mail/mail.module';
+import { AutomationModule } from './automations/automation.module';
 
 @Module({
-  imports: [MailModule],
+  imports: [AutomationModule],
   controllers: [AppController],
   providers: [
     {
